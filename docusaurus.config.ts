@@ -10,11 +10,11 @@ const config: Config = {
 
   // 🚀 호스팅 설정  
   url: 'https://junyeol.github.io',  // 실제 도메인
-  baseUrl: '/my-blog/',                        // 기본 경로 (보통 '/')
+  baseUrl: '/',                        // 기본 경로 (보통 '/')
 
   // 📁 GitHub Pages 배포용 (사용 안 할 경우 삭제 가능)
   organizationName: 'junye0l',        // GitHub 유저명/조직명
-  projectName: 'my-blog',          // GitHub 레포 이름
+  projectName: 'junye0l.github.io',          // GitHub 레포 이름
 
   // ⚠️ 에러 처리 설정
   onBrokenLinks: 'throw',             // 깨진 링크 발견시 빌드 중단
