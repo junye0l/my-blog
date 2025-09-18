@@ -44,8 +44,8 @@ const config: Config = {
           },
           blogTitle: 'Junyeol',   // 블로그 제목
           blogDescription: '개발과 공부를 기록하는 블로그',  // 블로그 설명
-          postsPerPage: 10,            // 페이지당 포스트 수
-          blogSidebarTitle: '최근 포스트',  // 사이드바 제목
+          postsPerPage: 5,            // 페이지당 포스트 수
+          blogSidebarTitle: 'Recent posts',  // 사이드바 제목
           blogSidebarCount: 100,         // 사이드바에 표시할 포스트 수
           
           // GitHub 편집 링크 (필요 없으면 삭제)
