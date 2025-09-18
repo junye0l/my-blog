@@ -14,13 +14,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: yarn
+          cache: npm # yarn에서 npm으로 변경
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci # yarn install에서 npm ci로 변경
 
       - name: Build website
-        run: yarn build
+        run: npm run build # yarn build에서 npm run build로 변경
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
