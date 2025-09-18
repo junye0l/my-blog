@@ -6,7 +6,7 @@ const config: Config = {
   // 🏠 기본 사이트 정보
   title: 'Junyeol Blog',                    // 브라우저 탭에 표시되는 제목
   tagline: 'Dinosaurs are cool',       // 메인 페이지 부제목
-  favicon: 'img/main-icon.ico',          // 브라우저 탭 아이콘
+  favicon: 'img/main.ico',          // 브라우저 탭 아이콘
 
   // 🚀 호스팅 설정  
   url: 'https://junyeol.github.io',  // 실제 도메인
