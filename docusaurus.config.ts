@@ -10,7 +10,7 @@ const config: Config = {
 
   // 🚀 호스팅 설정  
   url: 'https://junyeol.github.io',  // 실제 도메인
-  baseUrl: '/',                        // 기본 경로 (보통 '/')
+  baseUrl: '/my-blog/',                        // 기본 경로 (보통 '/')
 
   // 📁 GitHub Pages 배포용 (사용 안 할 경우 삭제 가능)
   organizationName: 'junye0l',        // GitHub 유저명/조직명
@@ -78,11 +78,24 @@ const config: Config = {
         src: 'img/main-icon.ico',           // 로고 이미지
       },
       items: [
-        // 블로그 링크 (메인이므로 제거 가능)
-        {to: '/', label: 'Blog', position: 'left'},
+        // 블로그 링크 (메인 페이지)
+        // 정확히 메인 페이지(/)일 때만 활성화되도록 설정
+        {
+          to: '/', 
+          label: 'Blog', 
+          position: 'left',
+          // 정확히 / 경로일 때만 활성화 (태그 페이지에서는 비활성화)
+          activeBaseRegex: '^/$',
+        },
         
-        // 카테고리 또는 태그 페이지
-        {to: '/tags', label: 'Tag', position: 'left'},
+        // 태그 페이지 - 태그 페이지에서만 활성화되도록 설정
+        {
+          to: '/tags', 
+          label: 'Tag', 
+          position: 'left',
+          // tags 경로일 때만 활성화
+          activeBaseRegex: '^/tags',
+        },
         
         // GitHub 링크
         {
@@ -96,18 +109,7 @@ const config: Config = {
     // 🦶 푸터
     footer: {
       style: 'dark',                   // 'dark' 또는 'light'
-      links: [
-        {
-          title: '링크',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/junye0l',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} 준열. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} JunYeol Blog`,
     },
 
     // 🎨 코드 하이라이팅 테마
@@ -127,4 +129,3 @@ const config: Config = {
 };
 
 export default config;
-
