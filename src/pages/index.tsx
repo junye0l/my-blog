@@ -1,43 +1,26 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      title={`${siteConfig.title}`}
+      description="준열의 개발 블로그">
+      <main style={{padding: '2rem 0', textAlign: 'center'}}>
+        <div className="container">
+          <Heading as="h1">{siteConfig.title}</Heading>
+          <p style={{fontSize: '1.2rem', margin: '1rem 0'}}>
+            {siteConfig.tagline}
+          </p>
+          <p>
+            개발과 공부를 기록하는 블로그입니다. 
+            <br />
+            블로그 포스트는 아래에서 확인하실 수 있습니다.
+          </p>
+        </div>
       </main>
     </Layout>
   );

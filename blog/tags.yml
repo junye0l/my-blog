@@ -1,19 +1,213 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+# JavaScript 스터디 관련 태그들
+JavaScript:
+  label: JavaScript
+  permalink: /javascript
+  description: JavaScript 관련 포스트
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+스터디:
+  label: 스터디
+  permalink: /study
+  description: 스터디 관련 포스트
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+# 데이터 타입 및 메모리 관련
+데이터타입:
+  label: 데이터 타입
+  permalink: /data-types
+  description: JavaScript 데이터 타입
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+변수:
+  label: 변수
+  permalink: /variables
+  description: 변수 관련 내용
+
+메모리:
+  label: 메모리
+  permalink: /memory
+  description: 메모리 관리 관련 내용
+
+# 객체 및 복사 관련
+불변객체:
+  label: 불변 객체
+  permalink: /immutable-objects
+  description: 불변 객체 패턴
+
+얕은복사:
+  label: 얕은 복사
+  permalink: /shallow-copy
+  description: 얕은 복사 방법
+
+깊은복사:
+  label: 깊은 복사
+  permalink: /deep-copy
+  description: 깊은 복사 방법
+
+언디파인드:
+  label: undefined
+  permalink: /undefined
+  description: undefined 관련 내용
+
+널:
+  label: "null"
+  permalink: /null
+  description: null 관련 내용
+
+# 함수 관련
+함수선언문:
+  label: 함수 선언문
+  permalink: /function-declaration
+  description: 함수 선언문
+
+함수표현식:
+  label: 함수 표현식
+  permalink: /function-expression
+  description: 함수 표현식
+
+호이스팅:
+  label: 호이스팅
+  permalink: /hoisting
+  description: 호이스팅 현상
+
+협업:
+  label: 협업
+  permalink: /collaboration
+  description: 협업 관련 내용
+
+# 실행 컨텍스트 관련
+실행컨텍스트:
+  label: 실행 컨텍스트
+  permalink: /execution-context
+  description: 실행 컨텍스트
+
+콜스택:
+  label: 콜 스택
+  permalink: /call-stack
+  description: 콜 스택
+
+렉시컬환경:
+  label: 렉시컬 환경
+  permalink: /lexical-environment
+  description: 렉시컬 환경
+
+스코프체인:
+  label: 스코프 체인
+  permalink: /scope-chain
+  description: 스코프 체인
+
+# 스코프 및 클로저 관련
+스코프:
+  label: 스코프
+  permalink: /scope
+  description: 스코프
+
+클로저:
+  label: 클로저
+  permalink: /closure
+  description: 클로저
+
+렉시컬스코프:
+  label: 렉시컬 스코프
+  permalink: /lexical-scope
+  description: 렉시컬 스코프
+
+모듈패턴:
+  label: 모듈 패턴
+  permalink: /module-pattern
+  description: 모듈 패턴
+
+# this 관련
+this:
+  label: this
+  permalink: /this
+  description: this 키워드
+
+호출방식:
+  label: 호출 방식
+  permalink: /call-method
+  description: 함수 호출 방식
+
+call:
+  label: call
+  permalink: /call
+  description: call 메서드
+
+apply:
+  label: apply
+  permalink: /apply
+  description: apply 메서드
+
+bind:
+  label: bind
+  permalink: /bind
+  description: bind 메서드
+
+화살표함수:
+  label: 화살표 함수
+  permalink: /arrow-function
+  description: 화살표 함수
+
+# 비동기 관련
+콜백함수:
+  label: 콜백 함수
+  permalink: /callback-function
+  description: 콜백 함수
+
+비동기:
+  label: 비동기
+  permalink: /asynchronous
+  description: 비동기 프로그래밍
+
+Promise:
+  label: Promise
+  permalink: /promise
+  description: Promise
+
+async/await:
+  label: async/await
+  permalink: /async-await
+  description: async/await
+
+# 프로그래머스 관련
+프로그래머스:
+  label: 프로그래머스
+  permalink: /programmers
+  description: 프로그래머스 문제 풀이
+
+알고리즘:
+  label: 알고리즘
+  permalink: /algorithm
+  description: 알고리즘
+
+코딩테스트:
+  label: 코딩테스트
+  permalink: /coding-test
+  description: 코딩테스트
+
+배열:
+  label: 배열
+  permalink: /array
+  description: 배열 자료구조
+
+수학:
+  label: 수학
+  permalink: /math
+  description: 수학 문제
+
+정렬:
+  label: 정렬
+  permalink: /sorting
+  description: 정렬 알고리즘
+
+조건문:
+  label: 조건문
+  permalink: /conditional
+  description: 조건문
+
+타입변환:
+  label: 타입 변환
+  permalink: /type-conversion
+  description: 타입 변환
+
+문자열:
+  label: 문자열
+  permalink: /string
+  description: 문자열 처리

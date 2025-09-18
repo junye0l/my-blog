@@ -2,147 +2,129 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
-  title: 'junyeol',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  // 🏠 기본 사이트 정보
+  title: 'Junyeol Blog',                    // 브라우저 탭에 표시되는 제목
+  tagline: 'Dinosaurs are cool',       // 메인 페이지 부제목
+  favicon: 'img/main-icon.ico',          // 브라우저 탭 아이콘
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
+  // 🚀 호스팅 설정  
+  url: 'https://junyeol.github.io',  // 실제 도메인
+  baseUrl: '/',                        // 기본 경로 (보통 '/')
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  // 📁 GitHub Pages 배포용 (사용 안 할 경우 삭제 가능)
+  organizationName: 'junye0l',        // GitHub 유저명/조직명
+  projectName: 'my-blog',          // GitHub 레포 이름
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // ⚠️ 에러 처리 설정
+  onBrokenLinks: 'throw',             // 깨진 링크 발견시 빌드 중단
+  onBrokenMarkdownLinks: 'warn',      // 깨진 마크다운 링크는 경고만
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // 🌍 다국어 설정 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'ko',              // 기본 언어를 한국어로
+    locales: ['ko'],                  // 지원 언어 (영어 제거)
   },
 
+  // 🔧 플러그인 및 프리셋 설정
   presets: [
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        // 📖 문서 기능 (블로그만 사용할 경우 false로 설정)
+        docs: false,                   // 문서 기능 비활성화
+
+        // ✍️ 블로그 설정 (메인 기능)
         blog: {
-          showReadingTime: true,
-          feedOptions: {
+          routeBasePath: '/',          // 블로그를 메인 페이지로 (중요!)
+          showReadingTime: true,       // 읽기 시간 표시
+          feedOptions: {               // RSS 피드 생성
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          blogTitle: 'Junyeol',   // 블로그 제목
+          blogDescription: '개발과 공부를 기록하는 블로그',  // 블로그 설명
+          postsPerPage: 10,            // 페이지당 포스트 수
+          blogSidebarTitle: '최근 포스트',  // 사이드바 제목
+          blogSidebarCount: 100,         // 사이드바에 표시할 포스트 수
+          
+          // GitHub 편집 링크 (필요 없으면 삭제)
+          editUrl: 'https://github.com/junye0l/my-blog/tree/main/',
+          
+          // 블로깅 모범 사례 경고
+          onInlineTags: 'warn',        // 인라인 태그 경고
+          onInlineAuthors: 'warn',     // 인라인 작성자 경고
+          onUntruncatedBlogPosts: 'warn',  // 잘리지 않은 포스트 경고
         },
+
+        // 🎨 테마 설정
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/custom.css',  // 커스텀 CSS 파일
         },
       } satisfies Preset.Options,
     ],
   ],
 
+  // 🎨 테마 상세 설정
   themeConfig: {
-    // Replace with your project's social card
+    // 📱 소셜 미디어 카드 이미지
     image: 'img/docusaurus-social-card.jpg',
+
+    // 🧭 네비게이션 바
     navbar: {
-      title: 'My Site',
+      title: 'Junyeol',           // 로고 옆 텍스트
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/main-icon.ico',           // 로고 이미지
       },
       items: [
+        // 블로그 링크 (메인이므로 제거 가능)
+        {to: '/', label: 'Blog', position: 'left'},
+        
+        // 카테고리 또는 태그 페이지
+        {to: '/tags', label: 'Tag', position: 'left'},
+        
+        // GitHub 링크
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/junye0l',
           label: 'GitHub',
           position: 'right',
         },
       ],
     },
+
+    // 🦶 푸터
     footer: {
-      style: 'dark',
+      style: 'dark',                   // 'dark' 또는 'light'
       links: [
         {
-          title: 'Docs',
+          title: '링크',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/junye0l',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} 준열. Built with Docusaurus.`,
     },
+
+    // 🎨 코드 하이라이팅 테마
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.github,       // 라이트 모드 테마
+      darkTheme: prismThemes.dracula,  // 다크 모드 테마
+      additionalLanguages: ['java', 'python', 'javascript'],  // 추가 언어 지원
+    },
+
+    // 🌙 다크모드 설정
+    colorMode: {
+      defaultMode: 'light',            // 기본 모드
+      disableSwitch: false,            // 다크모드 스위치 표시
+      respectPrefersColorScheme: true, // 시스템 설정 따르기
     },
   } satisfies Preset.ThemeConfig,
 };
 
 export default config;
+
