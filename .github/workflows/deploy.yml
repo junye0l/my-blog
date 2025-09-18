@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     name: Deploy to GitHub Pages
@@ -14,16 +17,17 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: npm # yarn에서 npm으로 변경
+          cache: npm
 
       - name: Install dependencies
-        run: npm ci # yarn install에서 npm ci로 변경
+        run: npm ci
 
       - name: Build website
-        run: npm run build # yarn build에서 npm run build로 변경
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+          force_orphan: true # 중요: gh-pages 브랜치를 깨끗하게 유지
