@@ -75,7 +75,7 @@ const config: Config = {
       title: 'Junyeol',           // 로고 옆 텍스트
       logo: {
         alt: 'My Site Logo',
-        src: 'img/main-icon.ico',           // 로고 이미지
+        src: 'img/main.ico',           // 로고 이미지
       },
       items: [
         // 블로그 링크 (메인 페이지)
