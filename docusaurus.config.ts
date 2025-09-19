@@ -106,12 +106,6 @@ const config: Config = {
       ],
     },
 
-    // 🦶 푸터
-    footer: {
-      style: 'dark',                   // 'dark' 또는 'light'
-      copyright: `Copyright © ${new Date().getFullYear()} JunYeol Blog`,
-    },
-
     // 🎨 코드 하이라이팅 테마
     prism: {
       theme: prismThemes.github,       // 라이트 모드 테마
